@@ -37,6 +37,18 @@ func TestStringToStringToSliceOfString(t *testing.T) {
 				"key3": {"val5", "val6"},
 			},
 		},
+		{
+			"Parse string to map of string to slice of string",
+			"key1",
+			map[string][]string{
+				"key1": {},
+			},
+		},
+		{
+			"Parse empty string to map of string to slice of string",
+			"",
+			map[string][]string{},
+		},
 	}
 
 	for _, testCase := range testCases {
